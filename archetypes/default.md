@@ -1,2 +1,5 @@
 +++
+categories = []
+tags = []
+title = ""
 +++
