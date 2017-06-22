@@ -1,0 +1,8 @@
+{{ if and .IsPage (ne .Params.toc false) }}
+<div class="block">
+  <header class="heading">
+    <p class="title is-6">Table of Contents</p>
+  </header>
+  <div class="content">{{ .TableOfContents }}</div>
+</div>
+{{ end }}

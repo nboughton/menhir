@@ -1,0 +1,9 @@
+{{ partial "header.html" . }}
+<div class="column is-two-thirds">
+  {{- range .Paginator.Pages }}
+  {{ partial "list_item.html" . }}
+  {{- end }}
+  {{ partial "widgets/paginator.html" . }}
+</div>
+{{ partial "sidebar.html" . }}
+{{ partial "footer.html" . }}

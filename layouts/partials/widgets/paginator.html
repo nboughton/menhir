@@ -1,0 +1,25 @@
+{{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
+<nav class="pagination is-centered">
+	{{- if .Paginator.HasPrev }}
+	<a class="pagination-previous" href="{{ .Paginator.Prev.URL }}">«</a>
+	{{- end }}
+  <ul class="pagination-list">
+    {{- if lt .Paginator.TotalPages 10 }}
+    {{- range .Paginator.Pagers }}
+    <li><a class="pagination-link" href="{{ .URL }}">{{ .PageNumber }}</a></li>
+    {{- end }}
+    {{- else }}
+    <li><a class="pagination-link" href="{{ .Paginator.First.URL }}">1</a></li>
+    <li><span class="pagination-ellipsis">&hellip;</span></li>
+    {{/* range */}}
+	  <li><a class="pagination-link">{{ .Paginator.PageNumber }}/{{ .Paginator.TotalPages }}</a></li>
+    {{/* end */}}
+    <li><span class="pagination-ellipsis">&hellip;</span></li>
+    <li><a class="pagination-link" href="{{ .Paginator.Last.URL }}">{{ .Paginator.TotalPages }}</a></li>
+    {{- end }}
+  </ul>
+	{{- if .Paginator.HasNext }}
+	<a class="pagination-next" href="{{ .Paginator.Next.URL }}">»</a>
+	{{- end }}
+</nav>
+{{ end }}
