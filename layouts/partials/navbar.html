@@ -1,9 +1,6 @@
-<nav class="nav">
-  <div class="container">
+
+<nav class="nav container">
   <div class="nav-left">
-    <a href="/" class="nav-item">
-      {{ .Site.Title | upper }}
-    </a>
     {{- if .Site.Menus.main }}
 		{{- range sort .Site.Menus.main }}
 		<a class="nav-item is-hidden-mobile" href="{{ .URL }}">{{ .Name | upper }}</a>
@@ -38,6 +35,5 @@
     </a>
     {{- end }}
     {{- end }}
-  </div>
   </div>
 </nav>

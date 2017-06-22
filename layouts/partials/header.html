@@ -8,10 +8,23 @@
     <link rel="dns-prefetch" href="//fonts.googleapis.com" />
     {{ if .RSSLink }}<link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }} Feed" href="{{ .RSSLink }}">{{ end }}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/bulmaswatch/lux/bulmaswatch.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
-    {{ partial "navbar.html" . }}
+    <section class="hero is-primary">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">
+            <a href="/">{{ .Site.Title | upper }}</a>
+          </h1>
+          <h2 class="subtitle">
+            {{ .Site.Params.subtitle }}
+          </h2>
+        </div>
+      </div>
+       {{ partial "navbar.html" . }}
+    </section>
     <div class="section">
       <div class="container">
         <div class="columns">

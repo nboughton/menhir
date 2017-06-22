@@ -1,0 +1,15 @@
+{{- if .Site.Params.widgets.recent_articles }}
+<div class="block">
+	<header class="heading">
+    <p class="title is-6 ">Recent Posts</p>
+  </header>
+	<div class="content">
+		<dl>
+			{{- $recent_articles_num := (.Site.Params.widgets.recent_articles_num | default 10) }}
+			{{- range first $recent_articles_num (where .Site.RegularPages "Section" "in" (.Site.Params.postSections | default (slice "post"))) }}
+			<dt><a class="" href="{{ .RelPermalink }}">{{ .Title }}</a></dt>
+			{{- end }}
+		</dl>
+	</div>
+</div>
+{{- end }}
