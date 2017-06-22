@@ -1,4 +1,4 @@
-{{ if and .IsPage (ne .Params.toc false) }}
+{{ if and .IsPage (eq .Params.toc true) }}
 <div class="block">
   <header class="heading">
     <p class="title is-6">Table of Contents</p>

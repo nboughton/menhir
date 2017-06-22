@@ -1,0 +1,20 @@
+{{ if or (.Prev) (.Next) }}
+<nav class="pagination is-centered">
+	{{- if .Prev }}
+	<a class="pagination-previous" href="{{ .Prev.URL }}">
+    <span class="icon">
+      <i class="fa fa-angle-double-left"></i>
+    </span>
+    &nbsp;{{ .Prev.Title }}
+  </a>
+	{{- end }}
+	{{- if .Next }}
+	<a class="pagination-next" href="{{ .Next.URL }}">
+    {{ .Next.Title }}&nbsp;
+    <span class="icon">
+      <i class="fa fa-angle-double-right"></i>
+    </span>
+  </a>
+	{{- end }}
+</nav>
+{{ end }}

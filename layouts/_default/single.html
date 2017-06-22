@@ -1,6 +1,15 @@
 {{ partial "header.html" . }}
 <div class="column is-two-thirds">
-  single stuff
+  <div class="block">
+    <header class="heading">
+      <p class="title">{{ .Title }}</p>
+      <p class="subtitle is-6">{{.Date.Format "January 02, 2006"}}</p>
+    </header>
+    <div class="content">
+      {{ .Content }}
+    </div>
+    {{ partial "widgets/post_paginator.html" . }}
+  </div>
 </div>
 {{ partial "sidebar.html" . }}
 {{ partial "footer.html" . }}
