@@ -1,31 +1,43 @@
 <nav class="nav">
+  <div class="container">
   <div class="nav-left">
     <a href="/" class="nav-item">
       {{ .Site.Title | upper }}
     </a>
     {{- if .Site.Menus.main }}
 		{{- range sort .Site.Menus.main }}
-		<a class="nav-item" href="{{ .URL }}">{{ .Name | upper }}</a>
+		<a class="nav-item is-hidden-mobile" href="{{ .URL }}">{{ .Name | upper }}</a>
 		{{- end }}
 		{{- end }}
   </div>
+  <span class="nav-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </span>
 
-  <div class="nav-right">
+  <div class="nav-right nav-menu">
+    {{- if .Site.Menus.main }}
+		{{- range sort .Site.Menus.main }}
+		<a class="nav-item is-hidden-tablet" href="{{ .URL }}">{{ .Name | upper }}</a>
+		{{- end }}
+		{{- end }}
     {{- if .Site.Params.widgets.social }}
     {{- with .Site.Params.widgets.social_twitter }}
-    <a class="nav-item" href="//twitter.com/{{ . }}">
+    <a class="nav-item is-hidden-mobile" href="//twitter.com/{{ . }}">
       <span class="icon">
         <i class="fa fa-twitter"></i>
       </span>
     </a>
     {{- end }}
     {{- with .Site.Params.widgets.social_github }}
-    <a class="nav-item" href="//github.com/{{ . }}">
+    <a class="nav-item is-hidden-mobile" href="//github.com/{{ . }}">
       <span class="icon">
         <i class="fa fa-github"></i>
       </span>
     </a>
     {{- end }}
     {{- end }}
+  </div>
   </div>
 </nav>
