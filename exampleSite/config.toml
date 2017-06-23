@@ -18,11 +18,11 @@ disqusShortname = "" # Enable comments by entering your Disqus shortname
     post_navigation = true # set to false to disable category based navigation links on article pages
     custom_css = []
     custom_js = []
-
-[Params.widgets]
     social_twitter = "" # Fill in any of the social_* variables to enable links to your social pages in the navbar
     social_github = ""
     social_facebook = ""
+
+[Params.widgets]
     recent_articles = true # Enable "Recent arcticles" widget
     categories = true # Enable "Categories" widget
     tags = true # Enable "Tags" widget

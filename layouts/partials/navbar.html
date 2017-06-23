@@ -19,21 +19,21 @@
 		<a class="nav-item is-hidden-desktop is-hidden-tablet" href="{{ .URL }}">{{ .Name | upper }}</a>
 		{{- end }}
 		{{- end }}
-    {{- with .Site.Params.widgets.social_facebook }}
+    {{- with .Site.Params.social_facebook }}
     <a class="nav-item is-hidden-mobile" href="//www.facebook.com/{{ . }}">
       <span class="icon">
         <i class="fa fa-facebook"></i>
       </span>
     </a>
     {{- end }}
-    {{- with .Site.Params.widgets.social_twitter }}
+    {{- with .Site.Params.social_twitter }}
     <a class="nav-item is-hidden-mobile" href="//twitter.com/{{ . }}">
       <span class="icon">
         <i class="fa fa-twitter"></i>
       </span>
     </a>
     {{- end }}
-    {{- with .Site.Params.widgets.social_github }}
+    {{- with .Site.Params.social_github }}
     <a class="nav-item is-hidden-mobile" href="//github.com/{{ . }}">
       <span class="icon">
         <i class="fa fa-github"></i>
