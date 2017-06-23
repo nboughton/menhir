@@ -5,9 +5,9 @@ name = "Menhir"
 license = "MIT"
 licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE.md"
 description = ""
-homepage = "http://siteforthistheme.com/"
-tags = []
-features = []
+homepage = "http://nboughton.uk/"
+tags = ["Bulma", "Blog"]
+features = ["Themable", "Minimalist"]
 min_version = "0.23"
 
 [author]

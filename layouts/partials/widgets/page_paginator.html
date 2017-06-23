@@ -1,23 +1,50 @@
 {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
+{{ $page := .Paginator.PageNumber }}
+{{ $total := .Paginator.TotalPages }}
 <nav class="pagination is-centered">
 	{{- if .Paginator.HasPrev }}
 	<a class="pagination-previous" href="{{ .Paginator.Prev.URL }}">Previous</a>
 	{{- end }}
+
   <ul class="pagination-list">
-    {{- if lt .Paginator.TotalPages 10 }}
+    {{- if and (lt .Paginator.TotalPages 11) (lt .Paginator.PageNumber 11) }}
     {{- range .Paginator.Pagers }}
-    <li><a class="pagination-link" href="{{ .URL }}">{{ .PageNumber }}</a></li>
+    <li><a class="pagination-link{{- if eq $page .PageNumber }} is-current{{- end -}}" href="{{ .URL }}">{{ .PageNumber }}</a></li>
     {{- end }}
+
     {{- else }}
-    <li><a class="pagination-link" href="{{ .Paginator.First.URL }}">1</a></li>
+    <li><a class="pagination-link{{- if eq $page .Paginator.First.PageNumber }} is-current{{- end -}}" href="{{ .Paginator.First.URL }}">1</a></li>
+
+    {{- if gt .Paginator.PageNumber 3 }}
     <li><span class="pagination-ellipsis">&hellip;</span></li>
-    {{/* range */}}
-	  <li><a class="pagination-link">{{ .Paginator.PageNumber }}/{{ .Paginator.TotalPages }}</a></li>
-    {{/* end */}}
+    {{- end }}
+    
+    {{- with .Paginator.Prev }}
+    {{- if gt .PageNumber 1 }}
+    <li><a class="pagination-link{{- if eq $page .PageNumber }} is-current{{- end -}}" href="{{ .URL }}">{{ .PageNumber }}</a></li>
+    {{- end }}
+    {{- end }}
+	  
+    {{- if (gt .Paginator.PageNumber 1) (lt .Paginator.PageNumber $total) }}
+    <li><a class="pagination-link{{- if eq $page .Paginator.PageNumber }} is-current{{- end -}}" href="{{ .Paginator.URL }}">{{ .Paginator.PageNumber }}</a></li>
+    {{- end }}
+  
+    {{- with .Paginator.Next  }}
+    {{- if lt .PageNumber $total }}
+    <li><a class="pagination-link{{- if eq $page .PageNumber }} is-current{{- end -}}" href="{{ .URL }}">{{ .PageNumber }}</a></li>
+    {{- end }}
+    {{- end }}
+
+    {{- if lt .Paginator.PageNumber (sub .Paginator.TotalPages 2)}}
     <li><span class="pagination-ellipsis">&hellip;</span></li>
-    <li><a class="pagination-link" href="{{ .Paginator.Last.URL }}">{{ .Paginator.TotalPages }}</a></li>
+    {{- end }}
+
+    {{- if ne $page $total }}
+    <li><a class="pagination-link{{- if eq $page .Paginator.Last.PageNumber }} is-current{{- end -}}" href="{{ .Paginator.Last.URL }}">{{ .Paginator.TotalPages }}</a></li>
+    {{- end }}
     {{- end }}
   </ul>
+
 	{{- if .Paginator.HasNext }}
 	<a class="pagination-next" href="{{ .Paginator.Next.URL }}">Next</a>
 	{{- end }}

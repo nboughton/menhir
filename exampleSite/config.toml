@@ -1,28 +1,26 @@
-baseurl = "https://nboughton.uk/"
-title = "nboughton.uk"
+baseurl = "https://example.com/"
+title = "Some Website!"
 languageCode = "en-gb"
 paginate = "10" # Number of posts per page
 theme = "menhir"
-disqusShortname = "nboughtonuk" # Enable comments by entering your Disqus shortname
-#googleAnalytics = "" # Enable Google Analytics by entering your tracking id
+disqusShortname = "" # Enable comments by entering your Disqus shortname
 
 [Author]
-    name = "Nick Boughton"
+    name = ""
     bio = "Some guy on the internet with opinions"
     avatar = "images/avatar.jpg"
 
 [Params]
     bulma_theme = "lux" # bulmaswatch theme - see https://jenil.github.io/bulmaswatch/
     subtitle = "Look, monkeys!" # Subtitle of your site
+    postSections = ["blog"] # Name sections here that you want to show up on the front page and in the recent articles widget
     #description = "Opinions from a code monkey" # Description of your site
     #authorbox = true
-    #post_navigation = true
 
 [Params.widgets]
     social = true # Enable social media links
-    social_twitter = "tiberiousr"
-    social_github = "nboughton"
-    #search = false # Enable "Search" widget
+    social_twitter = ""
+    social_github = ""
     recent_articles = true # Enable "Recent arcticles" widget
     #categories = true # Enable "Categories" widget
     #tags = true # Enable "Tags" widget
@@ -30,17 +28,3 @@ disqusShortname = "nboughtonuk" # Enable comments by entering your Disqus shortn
 [[menu.main]]
 	name = "Blog"
 	url = "/categories/blog/"
-	pre = ""
-	weight = -60
-
-[[menu.main]]
-	name = "Gloom Town"
-	url = "/categories/gloom-town/"
-	pre = ""
-	weight = -50
-
-[[menu.main]]
-    name = "Trumpcraft"
-    url = "http://trumpcraft.nboughton.uk"
-    pre = ""
-    weight = -40
