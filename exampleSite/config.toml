@@ -11,17 +11,16 @@ disqusShortname = "" # Enable comments by entering your Disqus shortname
     avatar = "images/avatar.jpg"
 
 [Params]
-    bulma_theme = "lux" # bulmaswatch theme - see https://jenil.github.io/bulmaswatch/
+    author_box = true
     subtitle = "Look, monkeys!" # Subtitle of your site
+    bulma_theme = "lux" # bulmaswatch theme - see https://jenil.github.io/bulmaswatch/
     post_sections = ["blog"] # Name sections here that you want to show up on the front page and in the recent articles widget
     post_navigation = true # set to false to disable category based navigation links on article pages
-    author_box = true
     custom_css = []
     custom_js = []
 
 [Params.widgets]
-    social = true # Enable social media links
-    social_twitter = ""
+    social_twitter = "" # Fill in any of the social_* variables to enable links to your social pages in the navbar
     social_github = ""
     social_facebook = ""
     recent_articles = true # Enable "Recent arcticles" widget
