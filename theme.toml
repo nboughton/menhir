@@ -3,7 +3,7 @@
 
 name = "Menhir"
 license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE.md"
+licenselink = "https://github.com/nboughton/menhir/blob/master/LICENSE.md"
 description = ""
 homepage = "http://nboughton.uk/"
 tags = ["Bulma", "Blog"]
