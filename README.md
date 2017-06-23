@@ -1,5 +1,5 @@
 # Menhir
-A minimalist Hugo theme built using the Bulma css framework.
+A minimalist Hugo theme built using the [Bulma](http://bulma.io/) css framework.
 
 A simple theme to use. Sections are defined directly below content/ and navigation is meant to be intuitive.
 By default the theme assumes you are posting content under content/blog but you can change which sections are
