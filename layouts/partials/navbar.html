@@ -16,7 +16,7 @@
   <div class="nav-right nav-menu">
     {{- if .Site.Menus.main }}
 		{{- range sort .Site.Menus.main }}
-		<a class="nav-item is-hidden-tablet" href="{{ .URL }}">{{ .Name | upper }}</a>
+		<a class="nav-item is-hidden-desktop is-hidden-tablet" href="{{ .URL }}">{{ .Name | upper }}</a>
 		{{- end }}
 		{{- end }}
     {{- if .Site.Params.widgets.social }}
