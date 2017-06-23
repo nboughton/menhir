@@ -1,26 +1,21 @@
-{{ if or (.Prev) (.Next) }}
-{{ $currentSection := .Section }}
+{{ if or (.PrevInSection) (.NextInSection) }}
 <nav class="pagination is-centered">
-	{{- with .Prev }}
-  {{- if eq $currentSection .Section }}
-	<a class="pagination-previous" href="{{ .URL }}">
-    <span class="icon">
-      <i class="fa fa-angle-double-left"></i>
-    </span>
-    &nbsp;{{ .Title | truncate 20 }}
-  </a>
-  {{- end }}
-	{{- end }}
-
-	{{- with .Next }}
-  {{ if eq $currentSection .Section }}
+  {{- with .PrevInSection }}
 	<a class="pagination-next" href="{{ .URL }}">
     {{ .Title | truncate 20 }}&nbsp;
     <span class="icon">
       <i class="fa fa-angle-double-right"></i>
     </span>
   </a>
-  {{- end }}
+	{{- end }}
+
+	{{- with .NextInSection }}
+	<a class="pagination-previous" href="{{ .URL }}">
+    <span class="icon">
+      <i class="fa fa-angle-double-left"></i>
+    </span>
+    &nbsp;{{ .Title | truncate 20 }}
+  </a>
 	{{- end }}
 </nav>
 {{ end }}
