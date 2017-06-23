@@ -7,8 +7,14 @@
     {{ .Hugo.Generator }}
     {{ if .RSSLink }}<link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }} Feed" href="{{ .RSSLink }}">{{ end }}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.min.css" />
-    <link rel="stylesheet" href="https://unpkg.com/bulmaswatch/{{ .Site.Params.bulma_theme | default "sandstone" }}/bulmaswatch.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/bulmaswatch/{{ .Site.Params.bulma_theme | default "sandstone" }}/bulmaswatch.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    {{- range .Site.Params.custom_css }}
+    <link rel="stylesheet" href="/css/{{ . }}" />
+    {{- end }}
+    {{- range .Params.custom_css }}
+    <link rel="stylesheet" href="/css/{{ . }}" />
+    {{- end }}
   </head>
   <body>
     <section class="hero is-primary">

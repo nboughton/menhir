@@ -17,6 +17,8 @@ disqusShortname = "" # Enable comments by entering your Disqus shortname
     post_navigation = true
     #description = "Opinions from a code monkey" # Description of your site
     author_box = true
+    custom_css = []
+    custom_js = []
 
 [Params.widgets]
     social = true # Enable social media links
