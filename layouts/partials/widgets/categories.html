@@ -1,0 +1,16 @@
+{{- if .Site.Params.widgets.categories }}
+{{- with .Site.Taxonomies.categories }}
+<div class="block">
+	<header class="heading">
+    <p class="title is-6">Categories</p>
+  </header>
+	<div class="content">
+		{{- range $name, $items := . }}
+		<span class="tag is-white">
+      <a href="{{ "categories/" | relLangURL }}{{ $name | urlize | lower }}">{{ $name | upper }}</a>
+    </span>
+		{{- end }}
+	</div>
+</div>
+{{- end }}
+{{- end }}

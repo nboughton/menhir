@@ -1,0 +1,16 @@
+{{- if .Site.Params.widgets.tags }}
+{{- with .Site.Taxonomies.tags }}
+<div class="block">
+	<header class="heading">
+    <p class="title is-6">Tags</p>
+  </header>
+	<div class="content">
+		{{- range $name, $items := . -}}
+    <span class="tag is-small is-white">
+      <a href="{{ "tags/" | relLangURL }}{{ $name | urlize | lower }}">{{ $name | upper }}</a>
+    </span>
+		{{- end }}
+	</div>
+</div>
+{{- end }}
+{{- end }}

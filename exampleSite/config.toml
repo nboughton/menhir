@@ -22,8 +22,8 @@ disqusShortname = "" # Enable comments by entering your Disqus shortname
     social_twitter = ""
     social_github = ""
     recent_articles = true # Enable "Recent arcticles" widget
-    #categories = true # Enable "Categories" widget
-    #tags = true # Enable "Tags" widget
+    categories = true # Enable "Categories" widget
+    tags = true # Enable "Tags" widget
 
 [[menu.main]]
 	name = "Blog"
