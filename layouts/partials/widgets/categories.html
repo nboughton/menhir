@@ -7,7 +7,7 @@
 	<div class="content">
 		{{- range $name, $items := . }}
 		<span class="tag is-white">
-      <a href="{{ "categories/" | relLangURL }}{{ $name | urlize | lower }}">{{ $name | upper }}</a>
+      <a href="{{ "categories/" | relLangURL }}{{ $name | urlize | lower }}">{{ $name | humanize | upper }}</a>
     </span>
 		{{- end }}
 	</div>
