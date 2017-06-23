@@ -4,10 +4,10 @@
 name = "Menhir"
 license = "MIT"
 licenselink = "https://github.com/nboughton/menhir/blob/master/LICENSE.md"
-description = ""
+description = "Menhir is a clean theme built on the Bulma CSS framework that features themability (via Bulma Swatch themes) and customisation"
 homepage = "http://nboughton.uk/"
-tags = ["Bulma", "Blog"]
-features = ["Themable", "Minimalist"]
+tags = ["Bulma", "Blog", "Minimal", "Clean", "Font Awesome"]
+features = ["Themable", "Minimalist", "Bulma", "Disqus", "Font Awesome"]
 min_version = "0.23"
 
 [author]
