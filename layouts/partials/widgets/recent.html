@@ -6,7 +6,7 @@
 	<div class="content">
 		<dl>
 			{{- $recent_articles_num := (.Site.Params.widgets.recent_articles_num | default 10) }}
-			{{- range first $recent_articles_num (where .Site.RegularPages "Section" "in" (.Site.Params.postSections | default (slice "blog"))) }}
+			{{- range first $recent_articles_num (where .Site.RegularPages "Section" "in" (.Site.Params.post_sections | default (slice "blog"))) }}
 			<dt><a class="" href="{{ .RelPermalink }}">{{ .Title }}</a></dt>
 			{{- end }}
 		</dl>

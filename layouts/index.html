@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
 <div class="column is-two-thirds">
-  {{ $paginator := .Paginate (where .Data.Pages "Section" "in" (.Site.Params.postSections | default (slice "blog")))}}
+  {{ $paginator := .Paginate (where .Data.Pages "Section" "in" (.Site.Params.post_sections | default (slice "blog")))}}
   {{- range $paginator.Pages }}
   {{ partial "list_item.html" . }}
   {{- end }}
