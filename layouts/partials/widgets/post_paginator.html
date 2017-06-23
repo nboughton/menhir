@@ -1,5 +1,15 @@
 {{ if or (.PrevInSection) (.NextInSection) }}
 <nav class="pagination is-centered">
+
+  {{- with .NextInSection }}
+	<a class="pagination-previous" href="{{ .URL }}">
+    <span class="icon">
+      <i class="fa fa-angle-double-left"></i>
+    </span>
+    &nbsp;{{ .Title | truncate 20 }}
+  </a>
+	{{- end }}
+
   {{- with .PrevInSection }}
 	<a class="pagination-next" href="{{ .URL }}">
     {{ .Title | truncate 20 }}&nbsp;
@@ -9,13 +19,5 @@
   </a>
 	{{- end }}
 
-	{{- with .NextInSection }}
-	<a class="pagination-previous" href="{{ .URL }}">
-    <span class="icon">
-      <i class="fa fa-angle-double-left"></i>
-    </span>
-    &nbsp;{{ .Title | truncate 20 }}
-  </a>
-	{{- end }}
 </nav>
 {{ end }}
