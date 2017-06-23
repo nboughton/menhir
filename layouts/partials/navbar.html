@@ -20,6 +20,13 @@
 		{{- end }}
 		{{- end }}
     {{- if .Site.Params.widgets.social }}
+    {{- with .Site.Params.widgets.social_facebook }}
+    <a class="nav-item is-hidden-mobile" href="//www.facebook.com/{{ . }}">
+      <span class="icon">
+        <i class="fa fa-facebook"></i>
+      </span>
+    </a>
+    {{- end }}
     {{- with .Site.Params.widgets.social_twitter }}
     <a class="nav-item is-hidden-mobile" href="//twitter.com/{{ . }}">
       <span class="icon">

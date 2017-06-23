@@ -22,6 +22,7 @@ disqusShortname = "" # Enable comments by entering your Disqus shortname
     social = true # Enable social media links
     social_twitter = ""
     social_github = ""
+    social_facebook = ""
     recent_articles = true # Enable "Recent arcticles" widget
     categories = true # Enable "Categories" widget
     tags = true # Enable "Tags" widget
