@@ -1,0 +1,28 @@
+{{- if .Site.Params.author_box }}
+<br />
+<article class="media">
+	{{- if and (not .Site.Author.avatar) (not .Site.Author.name) (not .Site.Author.bio) }}
+	<p class="notification is-warning"><strong>WARNING:</strong> Authorbox is activated, but [Author] parameters are not specified.</p>
+	{{- end }}
+	{{- with .Site.Author.avatar }}
+	<figure class="media-left">
+		<p class="image is-64x64">
+			<img alt="{{ $.Site.Author.name }} avatar" src="{{ $.Site.Author.avatar | relURL }}" class="avatar">
+		</p>
+	</figure>
+	{{- end }}
+	<div class="media-content">
+		<div class="content">
+			<p>
+			{{- with .Site.Author.name }}
+				<strong>About {{ . }}</strong>
+			{{- end }}
+			{{- with .Site.Author.bio }}
+				<br />
+				{{ . }}
+			</p>
+		</div>
+	</div>
+	{{- end }}
+</article>
+{{- end }}
