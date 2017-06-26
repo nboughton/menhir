@@ -1,9 +1,10 @@
-+++
-categories = []
-tags = []
-custom_css = []
-custom_js = []
-title = ""
-date = ""
-draft = true
-+++
+{
+  "title": "",
+  "date": "",
+  "categories": [],
+  "tags": [],
+  "toc":  false,
+  "draft": true,
+  "custom_css": [],
+  "custom_js": []
+}
