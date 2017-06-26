@@ -1,4 +1,6 @@
 +++
+title = "{{ replace .TranslationBaseName "-" " " | title }}"
+date = {{ .Date }}
 categories = ['blog']
 tags = []
 toc =  false
