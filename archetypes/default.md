@@ -1,6 +1,4 @@
 {
-  "title": "",
-  "date": "",
   "categories": [],
   "tags": [],
   "toc":  false,
