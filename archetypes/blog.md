@@ -4,5 +4,7 @@
   "categories": [ "blog" ],
   "tags": [],
   "toc":  false,
-  "draft": true
+  "draft": true,
+  "custom_css": [],
+  "custom_js": []
 }
