@@ -16,27 +16,22 @@
       {{- end }}
     </div>
     <div class="navbar-end">
-      {{- if .Site.Menus.main }} 
-      {{- range sort .Site.Menus.main }}
-      <a class="navbar-item" href="{{ .URL }}">{{ .Name | upper }}</a>
-      {{- end }} 
-      {{- end }} 
       {{- with .Site.Params.social_facebook }}
-      <a class="navbar-item" href="//www.facebook.com/{{ . }}">
+      <a class="navbar-item is-hidden-mobile is-hidden-tablet-only" href="//www.facebook.com/{{ . }}">
         <span class="icon">
           <i class="fa fa-facebook"></i>
         </span>
       </a>
       {{- end }} 
       {{- with .Site.Params.social_twitter }}
-      <a class="navbar-item" href="//twitter.com/{{ . }}">
+      <a class="navbar-item is-hidden-mobile is-hidden-tablet-only" href="//twitter.com/{{ . }}">
         <span class="icon">
           <i class="fa fa-twitter"></i>
         </span>
       </a>
       {{- end }} 
       {{- with .Site.Params.social_github }}
-      <a class="navbar-item" href="//github.com/{{ . }}">
+      <a class="navbar-item is-hidden-mobile is-hidden-tablet-only" href="//github.com/{{ . }}">
         <span class="icon">
           <i class="fa fa-github"></i>
         </span>
