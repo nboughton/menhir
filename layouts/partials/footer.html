@@ -1,20 +1,22 @@
-    </div>
-  </div>
-</div> 
+</div>
+</div>
+</div>
 <!-- close columns div from header -->
 <footer class="footer">
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script src="/js/site.min.js"></script>
-  {{- range .Site.Params.custom_js }}
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+  <script src="/js/site.min.js"></script> {{- range .Site.Params.custom_js }}
   <script src="/js/{{ . }}" /></script>
-  {{- end }}
-  {{- range .Params.custom_js }}
+  {{- end }} {{- range .Params.custom_js }}
   <script src="/js/{{ . }}" /></script>
   {{- end }}
   <div class="container">
     <div class="content has-text-centered">
       <p>&copy; {{ .Site.Author.name }} {{ now.Year }}</p>
-      <p><a href="https://github.com/nboughton/menhir">Menhir theme</a> by N.Boughton</p>
+      <p>
+        <a href="https://github.com/nboughton/menhir">Menhir theme</a> by N.Boughton</p>
     </div>
   </div>
 </footer>
+
+</html>

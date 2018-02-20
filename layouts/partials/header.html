@@ -1,39 +1,46 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode | default "en-gb" }}">
-  <head>
-    <meta charset="UTF-8">
-    <title>{{ .Title }}</title>
-    {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
-    {{ .Hugo.Generator }}
-    {{ if .RSSLink }}<link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }} Feed" href="{{ .RSSLink }}">{{ end }}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.min.css" />
-    <link rel="stylesheet" href="https://unpkg.com/bulmaswatch/{{ .Site.Params.bulma_theme | default "lux" }}/bulmaswatch.min.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-    {{- range .Site.Params.custom_css }}
-    <link rel="stylesheet" href="/css/{{ . }}" />
-    {{- end }}
-    {{- range .Params.custom_css }}
-    <link rel="stylesheet" href="/css/{{ . }}" />
-    {{- end }}
-  </head>
-  <body>
-    <section class="hero is-primary">
-      <div class="hero-body">
-        <div class="container">
-          <h1 class="title">
-            <a href="/">{{ .Site.Title | upper }}</a>
-          </h1>
-          {{- with .Site.Params.subtitle }}
-          <h2 class="subtitle is-6">
-            {{ . }}
-          </h2>
-          {{- end }}
-        </div>
-      </div>
-      <div class="hero-foot">
-      {{ partial "navbar.html" . }}
-      </div>
-    </section>
-    <div class="section">
+<html lang="{{ .Site.LanguageCode | default " en-gb " }}">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ .Title }}</title>
+  {{ with .Site.Params.description }}
+  <meta name="description" content="{{ . }}">
+  {{ end }} 
+  {{ .Hugo.Generator }} 
+  {{ if .RSSLink }}
+  <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }} Feed" href="{{ .RSSLink }}">
+  {{ end }}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/bulmaswatch/{{ .Site.Params.bulma_theme | default "lux" }}/bulmaswatch.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" /> 
+  {{- range .Site.Params.custom_css }}
+  <link rel="stylesheet" href="/css/{{ . }}" /> 
+  {{- end }} 
+  {{- range .Params.custom_css }}
+  <link rel="stylesheet" href="/css/{{ . }}" /> 
+  {{- end }}
+</head>
+
+<body>
+  <section class="hero is-primary">
+    <div class="hero-body">
       <div class="container">
-        <div class="columns">
+        <h1 class="title">
+          <a href="/">{{ .Site.Title | upper }}</a>
+        </h1>
+        {{- with .Site.Params.subtitle }}
+        <h2 class="subtitle is-6">
+          {{ . }}
+        </h2>
+        {{- end }}
+      </div>
+    </div>
+    <div class="hero-foot">
+      {{ partial "navbar.html" . }}
+    </div>
+  </section>
+  <div class="section">
+    <div class="container">
+      <div class="columns">

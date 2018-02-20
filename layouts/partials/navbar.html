@@ -1,44 +1,47 @@
-
-<nav class="nav container is-fullwidth">
-  <div class="nav-left">
-    {{- if .Site.Menus.main }}
-		{{- range sort .Site.Menus.main }}
-		<a class="nav-item is-hidden-mobile" href="{{ .URL }}">{{ .Name | upper }}</a>
-		{{- end }}
-		{{- end }}
+<nav class="navbar container is-fullwidth">
+  <div class="navbar-brand">
+    <div class="navbar-burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </div>
-  <span class="nav-toggle">
-    <span></span>
-    <span></span>
-    <span></span>
-  </span>
 
-  <div class="nav-right nav-menu">
-    {{- if .Site.Menus.main }}
-		{{- range sort .Site.Menus.main }}
-		<a class="nav-item is-hidden-desktop is-hidden-tablet" href="{{ .URL }}">{{ .Name | upper }}</a>
-		{{- end }}
-		{{- end }}
-    {{- with .Site.Params.social_facebook }}
-    <a class="nav-item is-hidden-mobile" href="//www.facebook.com/{{ . }}">
-      <span class="icon">
-        <i class="fa fa-facebook"></i>
-      </span>
-    </a>
-    {{- end }}
-    {{- with .Site.Params.social_twitter }}
-    <a class="nav-item is-hidden-mobile" href="//twitter.com/{{ . }}">
-      <span class="icon">
-        <i class="fa fa-twitter"></i>
-      </span>
-    </a>
-    {{- end }}
-    {{- with .Site.Params.social_github }}
-    <a class="nav-item is-hidden-mobile" href="//github.com/{{ . }}">
-      <span class="icon">
-        <i class="fa fa-github"></i>
-      </span>
-    </a>
-    {{- end }}
+  <div class="navbar-menu">
+    <div class="navbar-start">
+      {{- if .Site.Menus.main }} 
+      {{- range sort .Site.Menus.main }}
+      <a class="navbar-item" href="{{ .URL }}">{{ .Name | upper }}</a>
+      {{- end }} 
+      {{- end }}
+    </div>
+    <div class="navbar-end">
+      {{- if .Site.Menus.main }} 
+      {{- range sort .Site.Menus.main }}
+      <a class="navbar-item" href="{{ .URL }}">{{ .Name | upper }}</a>
+      {{- end }} 
+      {{- end }} 
+      {{- with .Site.Params.social_facebook }}
+      <a class="navbar-item" href="//www.facebook.com/{{ . }}">
+        <span class="icon">
+          <i class="fa fa-facebook"></i>
+        </span>
+      </a>
+      {{- end }} 
+      {{- with .Site.Params.social_twitter }}
+      <a class="navbar-item" href="//twitter.com/{{ . }}">
+        <span class="icon">
+          <i class="fa fa-twitter"></i>
+        </span>
+      </a>
+      {{- end }} 
+      {{- with .Site.Params.social_github }}
+      <a class="navbar-item" href="//github.com/{{ . }}">
+        <span class="icon">
+          <i class="fa fa-github"></i>
+        </span>
+      </a>
+      {{- end }}
+    </div>
   </div>
 </nav>
